@@ -12,7 +12,7 @@ First :
 
 Second :
 Pre-requisite : node.js, npm and git have to be installed at your terminal.
-* open your terminal and run "git clone ....................................................
+* open your terminal and run "git clone https://github.com/Abeer-uthman/-Feed-Reader-Testing
 * install http-server by "npm install -g http-server"
 * run http-server in terminal inside the root of the cloned repo
 * with your browser go to the URL "http://localhost:8080"
