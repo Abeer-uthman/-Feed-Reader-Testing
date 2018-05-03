@@ -42,7 +42,7 @@ $(function() {
 
          // This is a test that ensures the menu changes visibility when the menu icon is clicked
           it('the menu icon is clicked', function(){
-            var menuIcon = document.getElementsByClassName('menu-icon-link');
+            var menuIcon=$('.menu-icon-link');
             menuIcon.click();
            expect(document.body.classList).not.toContain('menu-hidden');
 
@@ -63,7 +63,7 @@ $(function() {
 
       // This is a test that ensures there is at least a single entry element within the feed container
       it('there is at least a single entry element within the feed container', function(done){
-       var entry = document.getElementsByClassName('entry');
+       var entry = $('.feed .entry');
        expect(entry.length).not.toBe(0);
        done();
       });
@@ -89,20 +89,8 @@ $(function() {
 
     // This is a test that ensures when a new feed is loaded the content actually changes
     it('the content actually changes', function(done){
-
-     //use setTimeout function to try delay the tests until the beforeEach run and set the innerHTML of the feeds at the global variables
-      setTimeout(function() {
-      expect(initContent).toBeDefined();
-      expect(newContent).toBeDefined();
       expect(initContent).not.toEqual(newContent);
-    }, 5000);
       done();
    });
-
-   afterEach(function()
-   {
-      loadFeed(0);
-   });
-
   });
-}());
+});
